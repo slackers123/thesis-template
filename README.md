@@ -7,13 +7,14 @@ https://www.tug.org/mactex/mactex-download.html
 
 ## Running stuff
 ### Compile
-- Windows (in cmd): build.bat
-- MacOs (terminal): ./build.sh
+- Windows (powershell): `build.ps1`
+- MacOs (terminal): `./build.sh`
 
 ### Continuously rebuild
-- Windows (in cmd): watch.bat
-- MacOs (terminal): ./watch.sh
-adding --open after the command will open the file automatically with your default pdf viewer. Otherwise you can find it in out/main.pdf.
+- Windows (powershell): `watch.ps1`
+- MacOs (terminal): `./watch.sh`
+
+adding `--open` after the command will open the file automatically with your default pdf viewer. Otherwise you can find it in ´out/main.pdf´.
 
 ## Recommendations
 ### Split screen
