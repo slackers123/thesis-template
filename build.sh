@@ -13,8 +13,8 @@ if [ $biber_exit_code -ne 0 ]; then
     pdflatex -output-directory="$output_dir" "$src_dir/main.tex"
 fi
 
-pdflatex_output=$?
+pdflatex_exit_code=$?
 
-if [ $biber_exit_code -ne 0 ]; then
+if [ $pdflatex_exit_code -ne 0 ]; then
     pdflatex -output-directory="$output_dir" "$src_dir/main.tex"
 fi
