@@ -1,0 +1,97 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\usepackage{hyperref}
+\usepackage[
+    backend=biber
+]{biblatex}
+\addbibresource{refs.bib}
+
+\usepackage{graphicx}
+\graphicspath{ {./src/images/} }
+
+\begin{document}
+
+\title{Title Heres}
+\author{Author here}
+\date{March 2025}
+\maketitle
+
+\begin{abstract}
+Abstract here
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+\newpage
+\section{Sections}
+Sections are sections
+\subsection{Subsections}
+Subsections are subsections
+\subsubsection{Subsubsections}
+Subsubsections are subsubsections
+\paragraph{Paragraphs}
+Paragraphs are paragraphs
+\subparagraph{Subparagraphs}
+Subparagraphs are subparagraphs
+\section{Lists}
+\subsection{Itemize}
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+\subsection{Enumerate}
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{enumerate}
+\subsection{Description}
+\begin{description}
+    \item[Item 1] Description of item 1
+    \item[Item 2] Description of item 2
+    \item[Item 3] Description of item 3
+\end{description}
+\section{Tables}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Column 1 & Column 2 & Column 3 \\
+        \hline
+        Row 1 & Row 1 & Row 1 \\
+        Row 2 & Row 2 & Row 2 \\
+        Row 3 & Row 3 & Row 3 \\
+        \hline
+    \end{tabular}
+    \caption{Table caption}
+    \label{tab1}
+\end{table}
+And now some text referencing the table \ref{tab1}.
+\section{Math}
+\subsection{Inline}
+This is an inline equation $E = mc^2$.
+\subsection{Display}
+This is a display equation:
+\begin{equation}
+E = mc^2
+\end{equation}
+
+\section{Citations}
+This paragraph will have a citation to an entry in the refs.bib file. \cite{cite1}
+
+\subsection{Figures}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{test.jpg}
+    \centering
+    \caption{Figure caption}
+    \label{fig1}
+\end{figure}
+
+And now some text referencing the figure \ref{fig1}.
+\newpage
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
