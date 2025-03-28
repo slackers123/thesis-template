@@ -6,15 +6,15 @@ cp "$src_dir/refs.bib" "$output_dir/"
 biber "$output_dir/main"
 biber_exit_code=$?
 
-pdflatex -output-directory="$output_dir" "$src_dir/main.tex"
+pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir/main.tex"
 
 if [ $biber_exit_code -ne 0 ]; then
 	biber "$output_dir/main"
-    pdflatex -output-directory="$output_dir" "$src_dir/main.tex"
+    pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir/main.tex"
 fi
 
 pdflatex_exit_code=$?
 
 if [ $pdflatex_exit_code -ne 0 ]; then
-    pdflatex -output-directory="$output_dir" "$src_dir/main.tex"
+    pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir/main.tex"
 fi
