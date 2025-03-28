@@ -6,13 +6,14 @@ https://www.tug.org/texlive/windows.html
 https://www.tug.org/mactex/mactex-download.html
 
 ## Running stuff
-### Compile your own stuff (only works on own branch)
+### Compile
 - Windows (in cmd): build.bat
 - MacOs (terminal): ./build.sh
 
 ### Continuously rebuild
 - Windows (in cmd): watch.bat
 - MacOs (terminal): ./watch.sh
+adding --open after the command will open the file automatically with your default pdf viewer. Otherwise you can find it in out/main.pdf.
 
 ## Recommendations
 ### Split screen
