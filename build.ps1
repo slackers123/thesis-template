@@ -25,7 +25,7 @@ if ($biber_exit_code -ne 0) {
 # Check the exit code of pdflatex
 $pdflatex_exit_code = $LASTEXITCODE
 
-if ($biber_exit_code -ne 0) {
+if ($pdflatex_exit_code -ne 0) {
     # Retry pdflatex if biber failed
     pdflatex -output-directory="$output_dir" "$src_dir\main.tex"
 }
