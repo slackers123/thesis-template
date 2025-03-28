@@ -14,12 +14,12 @@ biber "$output_dir\main"
 $biber_exit_code = $LASTEXITCODE
 
 # Run pdflatex
-pdflatex -output-directory="$output_dir" "$src_dir\main.tex"
+pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir\main.tex"
 
 if ($biber_exit_code -ne 0) {
     # Retry biber and pdflatex if biber failed
     biber "$output_dir\main"
-    pdflatex -output-directory="$output_dir" "$src_dir\main.tex"
+    pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir\main.tex"
 }
 
 # Check the exit code of pdflatex
@@ -27,5 +27,5 @@ $pdflatex_exit_code = $LASTEXITCODE
 
 if ($pdflatex_exit_code -ne 0) {
     # Retry pdflatex if biber failed
-    pdflatex -output-directory="$output_dir" "$src_dir\main.tex"
+    pdflatex -halt-on-error -output-directory="$output_dir" "$src_dir\main.tex"
 }
