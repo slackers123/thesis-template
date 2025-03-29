@@ -2,6 +2,8 @@
 ### Windows
 https://www.tug.org/texlive/windows.html
 
+open Powershell/cmd with admin priveleges and run the build.ps1 scrip once so it can set stuff up. idk why.
+
 ### MacOs
 https://www.tug.org/mactex/mactex-download.html
 
